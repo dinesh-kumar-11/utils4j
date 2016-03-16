@@ -9,3 +9,4 @@
 **/build.sh
 **/bin/**
 **/.DS_Store
+/target/
