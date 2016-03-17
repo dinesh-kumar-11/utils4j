@@ -5,15 +5,16 @@
 	<groupId>com.varra</groupId>
 	<artifactId>utils4j</artifactId>
 	<version>1.0</version>
-
+	<packaging>jar</packaging>
+	
 	<name>utils4j</name>
+	<description>A must have utils package for java, contains the utility classes which can fasten your development!</description>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<description>A must have utils package for java, contains the utility classes which can fasten your development!</description>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
