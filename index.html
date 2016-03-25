@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Utils4j by varra4u</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Utils4j</h1>
+      <h2 class="project-tagline">A must have utility package for java</h2>
+      <a href="https://github.com/varra4u/utils4j" class="btn">View on GitHub</a>
+      <a href="https://github.com/varra4u/utils4j/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/varra4u/utils4j/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="utils4j" class="anchor" href="#utils4j" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>utils4j</h1>
+
+<p>A must have utility package for java</p>
+
+<p><a href="https://travis-ci.org/varra4u/utils4j"><img src="https://travis-ci.org/varra4u/utils4j.svg" alt="Build Status"></a>
+<a href="https://coveralls.io/github/varra4u/utils4j?branch=master"><img src="https://img.shields.io/coveralls/varra4u/utils4j.svg" alt="Coverage Status"></a>
+<a href="https://maven-badges.herokuapp.com/maven-central/com.github.varra4u/utils4j"><img src="https://maven-badges.herokuapp.com/maven-central/com.github.varra4u/utils4j/badge.svg" alt="Maven Central"></a>
+<a href="http://www.javadoc.io/doc/com.github.varra4u/utils4j"><img src="https://javadoc-emblem.rhcloud.com/doc/com.github.varra4u/utils4j/badge.svg" alt="JavaDoc"></a>
+<a href="http://www.apache.org/licenses/LICENSE-2.0.html"><img src="http://img.shields.io/:license-apache-brightgreen.svg" alt="License"></a>
+<a href="http://stackoverflow.com/questions/tagged/utils4j"><img src="https://img.shields.io/:stack%20overflow-utils4j-brightgreen.svg" alt="Stack Overflow"></a></p>
+
+<p>Utils4J is a very intellegent, flexible and generic library, built to solve the developer's day to day problems with rewriting the same redundency code in all the projects. For more details, see our [API docs][javadoc] for the latest release.</p>
+
+<h3>
+<a id="getting-a-property-could-be-environment-properties-files-or-spring-context" class="anchor" href="#getting-a-property-could-be-environment-properties-files-or-spring-context" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting a property (could be environment, properties files or Spring Context)</h3>
+
+<p>Utils4J provides a very flexible and convenient interface to retrive the properties from any source, the beauty is no need to define the source to get the property from, as given below:</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">final</span> <span class="pl-smi">Object</span> value <span class="pl-k">=</span> <span class="pl-smi">VarraProperties</span><span class="pl-k">.</span>getProperty(<span class="pl-s"><span class="pl-pds">"</span>env<span class="pl-pds">"</span></span><span class="pl-k">+</span> <span class="pl-smi">StringUtils</span><span class="pl-c1"><span class="pl-k">.</span>DOT</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>property<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-smi">StringUtils</span><span class="pl-c1"><span class="pl-k">.</span>DOT</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>);
+<span class="pl-k">final</span> <span class="pl-smi">String</span> value <span class="pl-k">=</span> <span class="pl-smi">VarraProperties</span><span class="pl-k">.</span>getPropertyAsGeneric(<span class="pl-s"><span class="pl-pds">"</span>file<span class="pl-pds">"</span></span><span class="pl-k">+</span> <span class="pl-smi">StringUtils</span><span class="pl-c1"><span class="pl-k">.</span>DOT</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>property<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-smi">StringUtils</span><span class="pl-c1"><span class="pl-k">.</span>DOT</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>);
+<span class="pl-k">final</span> <span class="pl-smi">Student</span> student <span class="pl-k">=</span> <span class="pl-smi">VarraProperties</span><span class="pl-k">.</span>getWrapperProperty(<span class="pl-s"><span class="pl-pds">"</span>spring<span class="pl-pds">"</span></span><span class="pl-k">+</span> <span class="pl-smi">StringUtils</span><span class="pl-c1"><span class="pl-k">.</span>DOT</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>student<span class="pl-pds">"</span></span>, <span class="pl-smi">Student</span><span class="pl-k">.</span>class);</pre></div>
+
+<h4>
+<a id="features-at-a-glance" class="anchor" href="#features-at-a-glance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features at a Glance</h4>
+
+<p>Utils4J provides flexible construction to create a property repository with a combination of the following features:</p>
+
+<ul>
+<li>Automatic way of loading the properties, optionally asynchronously.</li>
+<li>Time based eviction of properties, if you prefer to unload the entries.</li>
+<li>Flexible way to load the spring context, and make them available as part of repo.</li>
+<li>Automatic loading of system environment's properties and make them available as part of repo to an entire application.</li>
+<li>asynchronous way of refreshing/reloading the properties.</li>
+<li>Property values automatically wrapped in to the desired types.</li>
+<li>Provides an interface for storing the todo tasks.</li>
+<li>Asynchronous way of executing the tasks, maintains an in-memory based queue with fixed or unlimted based on configuration.</li>
+<li>Evicts the tasks if the queue is full and notifys the evicted tasks to the listener thread in an asynchrounous way.</li>
+<li>Provides an interface to perform some household work when the task is completed/failed.</li>
+<li>Misc utilities for day to day developer's usage.</li>
+</ul>
+
+<p>You can contact at anytime by raising a public issue if you find any issue or can contact to my mail id for any help.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/varra4u/utils4j">Utils4j</a> is maintained by <a href="https://github.com/varra4u">varra4u</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
