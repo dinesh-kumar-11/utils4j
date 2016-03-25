@@ -3,7 +3,6 @@ A must have utility package for java
 
 
 [![Build Status](https://travis-ci.org/varra4u/utils4j.svg)](https://travis-ci.org/varra4u/utils4j)
-[![Coverage Status](https://img.shields.io/coveralls/varra4u/utils4j.svg)](https://coveralls.io/github/varra4u/utils4j?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.varra4u/utils4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.varra4u/utils4j)
 [![JavaDoc](https://javadoc-emblem.rhcloud.com/doc/com.github.varra4u/utils4j/badge.svg)](http://www.javadoc.io/doc/com.github.varra4u/utils4j)
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
