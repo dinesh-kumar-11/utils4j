@@ -35,3 +35,6 @@ Utils4J provides flexible construction to create a property repository with a co
  * Evicts the tasks if the queue is full and notifys the evicted tasks to the listener thread in an asynchrounous way.
  * Provides an interface to perform some household work when the task is completed/failed.
  * Misc utilities for day to day developer's usage.
+
+
+[javadoc]: https://www.javadoc.io/doc/com.github.varra4u/utils4j
