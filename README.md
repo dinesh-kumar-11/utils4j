@@ -8,7 +8,7 @@ A must have utility package for java
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Stack Overflow](https://img.shields.io/:stack%20overflow-utils4j-brightgreen.svg)](http://stackoverflow.com/questions/tagged/utils4j)
 
-Utils4J is a very intellegent, flexible and generic library, built to solve the developer's day to day problems with rewriting the same redundency code in all the projects. For more details, see our [API docs][javadoc] for the latest release.
+Utils4J is a very intellegent, flexible and generic library, built to solve the developer's day to day problems and most importantly it removes the burden of rewriting the same redundency code in all the projects. For more details, see our [API docs][javadoc] for the latest release.
 
 ### Getting a property (could be environment, properties files or Spring Context)
 
