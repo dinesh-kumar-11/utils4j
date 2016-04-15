@@ -277,10 +277,12 @@ public class PropertyFileMonitor extends EnhancedTimerTask implements Shutdownab
 		matcher.reset(property.toString());
 		if (matcher.matches())
 		{
-			final String name = matcher.groupCount() > 0 ? matcher.group(1) : null; 
+			final String name = matcher.groupCount() > 0 ? matcher.group(1) : null;
 			Object value = isNull(properties.get(name)) ? System.getenv(name) : properties.get(name);
 			value = isNull(value) ? value : resolve(value.toString(), properties);
-			property = property.replaceAll(FIRST_PART + name + SECOND_PART, isNull(value) ? SPACE : value.toString());
+			// Deprecated since it had yielded some unexpected results.
+			//property = property.replaceAll(FIRST_PART + name + SECOND_PART, isNull(value) ? SPACE : value.toString());
+			property = property.replace(DOLLAR + LEFT_BRACE + name + RIGHT_BRACE, isNull(value) ? SPACE : value.toString());
 			return resolve(property, properties);
 		}
 		return property;
