@@ -10,6 +10,16 @@ A must have utility package for java
 
 Utils4J is a very intellegent, flexible and generic library, built to solve the developer's day to day problems and most importantly it removes the burden of rewriting the same redundency code in all the projects. For more details, see our [API docs][javadoc] for the latest release.
 
+### You can find this artifact details in Maven artifactory at:
+```xml 
+<!-- https://mvnrepository.com/artifact/com.github.varra4u/utils4j -->
+<dependency>
+    <groupId>com.github.varra4u</groupId>
+    <artifactId>utils4j</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
 ### Getting a property (could be environment, properties files or Spring Context)
 
 Utils4J provides a very flexible and convenient interface to retrive the properties from any source, the beauty is no need to define the source to get the property from, as given below:
